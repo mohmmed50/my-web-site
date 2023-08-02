@@ -1,0 +1,159 @@
+
+:root {
+    --width : 800px;
+    --height : 500px;
+}
+
+@media (max-width: 769px) {
+    :root {
+        --width : 650px;
+        --height : 400px;
+    }
+
+}
+
+
+
+
+.custom-title{
+    text-align: center;
+}
+
+.slider {
+  width: var(--width);
+  height: var(--height);
+  overflow: hidden;
+  border-radius: 3px;
+  box-shadow: 3px 10px 15px 0px rgba(0,0,0,0.4);
+  
+}
+
+.co-ul {
+    display: flex;
+    list-style: none;
+    transition: all 1s ease;
+}
+
+
+.co-ul img {
+    width: var(--width);
+    height: var(--height);
+    border-radius: 3px;
+}
+
+.card-i {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 0;
+    padding: 10px;
+    border: solid gray 2px;
+    font-size: 40px;
+}
+
+.card-i h5{
+    color: aliceblue;
+    font-size: 30px;
+}
+
+.card-i .dis-span{
+    display: none; 
+}
+
+.card-i:hover {
+    padding: 20px;
+    border: solid rgb(255, 255, 255) 9px;
+    border-radius: 50px;
+    
+}
+.card-i:hover .file_icon{
+    font-size: 60px;
+
+}
+
+
+
+/* pop out messag  */
+
+.popup{
+    background-color: #403434;
+    color: #fff;
+    opacity: 0.99;
+    width: 500px;
+    padding: 30px 40px;
+    position: fixed;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    font-family: "Poppins",sans-serif;
+    display: none; 
+    text-align: center;
+    animation: fadeIn 1s
+}
+.popup button{
+    display: block;
+    margin:  0 0 10px auto;
+    margin-right: -10px;
+    background-color: transparent;
+    font-size: 30px;
+    color: black;
+    background: #ffb400;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    
+}
+.popup h2{
+  margin-top: -50px;
+}
+.popup p{
+    font-size: 18px;
+    text-align: center;
+    margin: 20px;
+    line-height: 25px;
+    height: auto;
+}
+.popup a{
+    display: block;
+    width: 150px;
+    position: relative;
+    margin: 10px auto;
+    text-align: center;
+    background-color: #0f72e5;
+    border-radius: 20px;
+    color: #8d3232;
+    text-decoration: none;
+    padding: 8px 0;
+}
+
+
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.2,0.2);
+    }
+
+    100% {
+      opacity: 1;
+      ttransform: scale(.9,.9);
+    }
+  }
+
+@keyframes fadeOut {
+0% {
+    opacity: 1;
+    ttransform: scale(.9,.9);
+}
+
+100% {
+    opacity: 0;
+    transform: scale(0.2,0.2);
+}
+}

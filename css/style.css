@@ -1,0 +1,253 @@
+
+* {
+    transition: all 0.3s;
+}
+
+body{
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-padding-top: 0;
+}
+
+.yeloo_back{
+    background: #ffb400;
+    position: fixed;
+    height: 200%;
+    width: 100%;
+    transform: rotate(-15deg);
+    left: -83%;
+    top: -50%;
+}
+
+.my_image{
+    /* z-index: ; */
+    left: 40px;
+    top: 40px;
+}
+.my_image img{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    height: calc(100vh - 80px);
+    border-radius: 30px;
+    box-shadow: 0 0 7px rgba(0,0,0,.9);
+
+ }
+.main_ittems{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 20px;
+}
+@media  (min-width: 992px) {
+    .main_ittems h1{
+        padding-left: 400px;
+    }
+    .main_ittems p{
+        padding-left: 500px;
+        
+    }
+}
+
+.main_ittems img{
+    border-radius: 50%;
+    width: 270px;
+    height: 270px;
+    border: 4px solid #252525;
+    margin: 0 auto 25px;
+}
+
+.main_ittems {
+    margin-top: 100px;
+}
+
+.main_ittems h1{
+    color: #ffb400;
+    font-size: 36px;
+    line-height: 48px;
+    /* margin: 29px 0 13px; */
+}
+.main_ittems h1 span{
+    color: #fff;
+    display: block;
+}
+
+.main_ittems p{
+    color:#aeadad ;
+    font-size: 25px;
+
+}
+
+@media  (min-width: 992px) {
+    .main_ittems img{
+        display: none;
+    }
+    .main_ittems h1{
+        margin-top: 200px;
+        margin-left: 100px;
+        text-align: center;
+        
+    }
+    .main_ittems h1,p{
+        max-width: calc(60% - 50px);
+    }
+}
+
+@media (max-width: 767px){
+    .main_ittems p {
+        font-size: 30px;
+        line-height: 28px;
+    }
+}
+
+
+.nav-m{
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 5rem;
+    height: 100%;
+    padding: 0 1rem;
+    margin-bottom: 0.5px;
+    /* border-radius: 1.25rem 1.25rem 0 0; */
+    transition: .5s;
+    padding-top: 25vh;
+}
+@media (max-width: 991px){
+    body{
+        height: 100vh;
+        /* overflow: hidden; */
+        
+    }
+    .nav-m{
+        /* z-index: 1; */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around ;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background-color: #1a1212;
+        box-shadow: 0 -1px 12px hsla(174, 63%, 15%, 0.15); 
+        width: 100%;
+        height: 5rem;
+        padding: 0 1rem;
+        margin-bottom: 0.5px;
+        /* border-radius: 1.25rem 1.25rem 0 0; */
+        transition: .5s;
+    }
+    .nav-m li:hover{
+        background-color: #ffb400;
+    }
+    .main_ittems h1{
+        font-size: 25px;
+        text-align: center;
+    }
+    .main_ittems span{
+        font-size: 25px;
+        margin-top: -10px;
+    }
+    .main_ittems p{
+        position: f;
+        margin-top: -10px;
+        font-size: 20px;
+        color: gray;
+        text-align: center;
+        height: 100%;
+        z-index: 1;
+        
+        
+    }
+}
+
+
+.nav-m li {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    list-style: none;
+    margin: 20px 0;
+    border-radius: 50%;
+    background: #444;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav-m li i {
+    z-index: 120;
+}
+
+
+.nav-m h2{
+    display: none;
+}
+
+
+@media (min-width: 991px){
+
+    .nav-m li:hover h2{
+        z-index: -1;
+        display: block;
+        font-size: 20px;
+        width: 200px;
+        height: 50px;
+        margin-top: 8px;
+        margin-right: -31px;
+        padding-right: 30px;
+        padding-left: 20px;
+        padding-top: 10px;
+        border-radius: 50px;
+        color: #fff;
+        border-right: solid 20px;
+        background-color: #ffb400;
+    }
+    
+    .nav-m li:hover{
+        display: flex;
+        justify-content: space-around;
+        justify-content: flex-end;
+        background-color: #ffb400;
+    }
+    
+    .nav-m li:hover i{
+        margin-right: 16px;
+}
+
+}
+
+
+
+.nav-m .active-nav{
+    background-color: #ffb400;
+    
+}
+
+#text {
+	display: inline-block;
+	vertical-align: middle;
+	color: rgb(255, 255, 255);
+	letter-spacing: 2px;
+}
+
+#cursor {
+	display: inline-block;
+	vertical-align: middle;
+	width: 3px;
+	height: 50px;
+	background-color: rgb(255, 255, 255);
+	animation: blink .75s step-end infinite;
+}
+
+@keyframes blink {
+	from, to { 
+		background-color: transparent 
+	}
+	50% { 
+		background-color: rgb(255, 255, 255); 
+	}
+}
